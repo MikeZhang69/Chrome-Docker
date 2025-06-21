@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     fonts-wqy-zenhei \
     fonts-noto-cjk \
+    docker.io \
     && ln -fs /usr/share/zoneinfo/UTC /etc/localtime \
     && dpkg-reconfigure -f noninteractive tzdata \
     && apt-get clean \
