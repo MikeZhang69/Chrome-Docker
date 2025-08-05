@@ -47,6 +47,13 @@ This repository contains a development environment setup for running Google Chro
   - Check for missing `docker-compose` or permission issues. Ensure `Dockerfile.chrome` installs `docker-compose` and `sudo chmod 666 /var/run/docker.sock` is effective.
 - **No VNC Access**:
   - Confirm ports 5900 and 6080 are forwarded, and services are running with `docker ps`.
+  - 
+##  Correct Order of the Display
+- Virtual Screen ≥ VNC Display: Prevents cropping or scrollbars in the VNC viewer.
+
+- VNC Display ≥ Chrome Window: Ensures the entire Chrome window is visible without scaling.
+
+- Chrome Window < Virtual Screen: Avoids rendering issues and guarantees full visibility.
 
 ## Known Issues and Workarounds
 
