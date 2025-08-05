@@ -21,7 +21,7 @@ services:
     image: theasp/novnc:latest
     environment:
       - VNC_SERVER=127.0.0.1:5900
-      - RESOLUTION=1280x800
+      - RESOLUTION=1280x1024
       - RUN_XTERM=no
       - RUN_FLUXBOX=no
     network_mode: host
