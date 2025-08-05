@@ -13,15 +13,15 @@ services:
       - /dev/shm:/dev/shm
     network_mode: host
     command: >
-      sh -c "mkdir -p /var/run/dbus && Xvfb :99 -screen 0 1600x1000x24 -nolisten tcp & 
+      sh -c "mkdir -p /var/run/dbus && Xvfb :99 -screen 0 1920x1200x24 -nolisten tcp & 
              sleep 2 && x11vnc -display :99 -forever -nopw -rfbport 5900 -verbose -shared -logfile /tmp/x11vnc.log &
-             google-chrome --no-sandbox --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --disable-accelerated-2d-canvas --disable-accelerated-jpeg-decoding --disable-accelerated-mjpeg-decode --disable-accelerated-video-decode --no-first-run --window-size=1920,1080"
+             google-chrome --no-sandbox --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage --disable-accelerated-2d-canvas --disable-accelerated-jpeg-decoding --disable-accelerated-mjpeg-decode --disable-accelerated-video-decode --no-first-run --window-size=1600,1000"
     shm_size: '512m'
   novnc:
     image: theasp/novnc:latest
     environment:
       - VNC_SERVER=127.0.0.1:5900
-      - RESOLUTION=1280x1024
+      - RESOLUTION=1920,1080
       - RUN_XTERM=no
       - RUN_FLUXBOX=no
     network_mode: host
