@@ -59,6 +59,7 @@ This repository contains a development environment setup for running Google Chro
 
 - **Compatibility**: Uses `docker-compose` v1.29.2 to avoid SSL version issues with older `pip`-installed versions.
 - **Permissions**: The `postCreateCommand` adjusts Docker socket permissions; ensure it executes successfully.
+- **Gemini Pro** Invitation link: g.co/g1referral/3NV2LL2Y
 
 ## Contributing
 
